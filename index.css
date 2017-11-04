@@ -1,0 +1,17 @@
+body{
+  background-color: #f7e2de;
+}
+
+.done{
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+h1 {
+  text-align: center;
+}
+
+.move {
+  align-items: center;
+  align-content: center;
+}

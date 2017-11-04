@@ -1,0 +1,31 @@
+  <!doctype html>
+  <html>
+    <head>
+      <title> Angular App </title>
+      <!-- Include the AngularJS library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+      <script src="app.js"></script>
+      <link rel="stylesheet" href="index.css" type="text/css">
+    </head>
+    <body ng-app="ToDo" ng-controller="todoController">
+      <div ng-controller="todoController">
+   <h1> {{ title }} </h1>
+
+
+        <form name="frm" ng-submit="addTodo()">
+          <input type="text" name="newtodo" ng-model="newTodo" required />
+          <button ng-disabled="frm.$invalid"> Go </button>
+        </form>
+        <button ng-click="clearCompleted()"> Clear Completed </button>
+
+      <ul>
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done"/>
+          <span ng-class="{'done':todo.done}">{{todo.title}}</span>
+        </li>
+      </ul>
+  </div>
+
+
+    </body>
+  </html>
